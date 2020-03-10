@@ -1,41 +1,29 @@
 #include<iostream>
-
+//DOESNT WORK
 using namespace std;
 
-int main(){
-    string name = "xiaodao"; // 6 letrass
-    int samechar = 0;
-    int disctintchar = 0;
-    char comparing;
-    char with;
-    //cout << "Name: ";
-    //cin >> name;
-    for(int i = 0; i < name.length(); i++){
-        for(int j = i+1; j < name.length(); j++){
-            comparing = name[i];
-            with = name[j];
-            if(name[i] == name[j]){
-                samechar++;
-            }
-            else{
-                disctintchar++;
-            }
+bool contains (string arr,char elem){
+    for(int i = 0; i < arr.length(); i++){
+        if(arr[i] == elem){
+            return true;
         }
     }
-    /*
-    if(samechar % 2 != 0){
-        cout << "CHAT WITH HER!";
+    return false;
+}
+string init (string s,int len){
+    for(int i = 0; i < len; i++){
+        s[i] = ' ';
     }
-    else{
-        cout << "IGNORE HIM!";
+    return s;
+}
+int main(){
+    string name = "xiaodao"; // 6 letrass
+    string arr = init(arr,name.length()); 
+    int j = 0;
+    for(int i = 0; i < name.length(); i++){
+        if(!contains(arr,name[i])){
+            arr[j] = name[i];
+            j++;
+        }
     }
-    */
-    cout << "Samechar: " << samechar << endl;
-    cout << "disctintchar: " << disctintchar << endl;
-   if (disctintchar % 2 == 0){
-       cout << "CHAT WITH HER!";
-   }
-   else{
-       cout << "IGNORE HIM";
-   }
 }
