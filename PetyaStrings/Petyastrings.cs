@@ -39,7 +39,7 @@ namespace Codeforces {
                     return tuple.Item2;
                 }
             }
-            return 7;
+            return 7; //Just because the previous if is always true
         }
         public static void Main (){
             var Petya = new Petyastrings();
