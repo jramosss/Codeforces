@@ -3,25 +3,18 @@
 using namespace std;
 
 int main (){
-    unsigned int contestants;
-    unsigned int score_to_beat;
-    cout << "Number of contestants: ";
+    int contestants;
+    int score_to_beat;
     cin >> contestants;
-    cout << "Score to beat: ";
     cin >> score_to_beat;
-    int contestants_score[contestants];
-    int aux = 0;
-    for (unsigned int i = 0; i < contestants; i++){
-        cout << "Contestant " << i << " Score: ";
-        cin >> aux;
-        contestants_score[i] = aux;
-    }
+    int contestant_score;
     int c = 0;
-    for (unsigned int i = 0; i < contestants; i++){
-        if(contestants_score[i] > score_to_beat){
+    for (int i = 0; i < contestants; i++){
+        cin >> contestant_score;
+        if (contestant_score > score_to_beat){
             c++;
         }
     }
     cout << c << endl;
-    return 7;
+    return 0;
 }

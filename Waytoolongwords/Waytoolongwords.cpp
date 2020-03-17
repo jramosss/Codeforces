@@ -2,13 +2,11 @@
 
 using namespace std;
 
-string word;
 int main (){
-    unsigned int lines;
-    cout << "Lines: ";
+    string word;
+    int lines;
     cin >> lines;
-    for (unsigned int i = 0; i < lines; i++){
-        cout << "word";
+    while(lines--){
         cin >> word;
         if (word.length() > 10){
             cout << word[0] << word.length() - 2 << word[word.length()-1] << endl;
@@ -17,5 +15,5 @@ int main (){
             cout << word;
         }
     }
-    return 7;
+    return 0;
 }
