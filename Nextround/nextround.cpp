@@ -3,17 +3,20 @@
 using namespace std;
 
 int main (){
-    int contestants;
-    int score_to_beat;
-    cin >> contestants;
-    cin >> score_to_beat;
-    int contestant_score;
+    int n;  //Number of contestants
+    int participant_to_beat;    //Index of the participant to beat
+    cin >> n >> participant_to_beat;
     int c = 0;
-    for (int i = 0; i < contestants; i++){
-        cin >> contestant_score;
-        if (contestant_score > score_to_beat){
+    int count = 0;
+    int* contestants = (int*)calloc(n,sizeof(int));
+
+    for (int i = 0; i < n; i++){
+        cin >> contestants[i];
+    }
+    for (int i = 0; i < n; i++) {
+        if (contestants[i] >= contestants[participant_to_beat-1] 
+            && contestants[i] > 0)
             c++;
-        }
     }
     cout << c << endl;
     return 0;
