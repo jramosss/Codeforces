@@ -34,5 +34,5 @@ int main () {
         bob *= 2;
         c++;
     }
-    printf("%d",c);
+    cout << c;
 }
