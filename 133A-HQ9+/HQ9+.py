@@ -18,16 +18,17 @@ Output
 Output "YES", if executing the program will produce any output, and "NO" otherwise.
 '''
 
+
 def main ():
+    lang = ['H','Q','9']
     comm = str(input())
     for c in comm:
-        if c == 'H' or c == 'Q' or c == 9 or c == '+' or c == '9':
+        if c in lang:
             print("YES")
-            return 0
-        else:
-            continue
+            return
+
+
     print("NO")
-    return 0
 
 
 main()

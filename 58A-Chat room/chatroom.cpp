@@ -4,7 +4,6 @@ using namespace std;
 
 int main () {
     string word;
-    cout << "Word: ";
     cin >> word;
     string word2 = "hello";
     int j = 0;
