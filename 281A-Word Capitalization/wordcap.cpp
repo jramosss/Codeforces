@@ -1,10 +1,11 @@
 #include<iostream>
-#include<cmath>
+
+#define MAX 1000
 
 using namespace std;
 
 int main () {
-    string word;
+    char word[MAX];
     cin >> word;
     word[0] = toupper(word[0]);
     cout << word;

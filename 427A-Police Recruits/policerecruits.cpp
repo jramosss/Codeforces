@@ -5,17 +5,19 @@ using namespace std;
 //Didnt pass the tests, dunno why
 
 int main (void) {
-    int n,polices = 0,crimes = 0,a;
+    int n,cops = 0,crimes = 0,a;
     cin >> n;
+    //
     while (n--){
         cin >> a;
         if (a > 0)
-            polices += a;
+            cops += a;
         else {
-            if (polices && crimes)
-                polices-= a;
+            if (cops && crimes)
+                //bc a is negative
+                cops -= abs(a);
             else
-                crimes -= a;
+                crimes += abs(a);
         }
     }
     cout << crimes;
